@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.io.Serializable;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -43,7 +42,7 @@ public class RedisService {
         return (T) this.redisTemplate.opsForValue().get(key);
     }
 
-    void delete(String...keys) {
+    void delete(String... keys) {
         if (null == keys) {
             return;
         }
